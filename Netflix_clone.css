@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+}
+.main{
+    background-image: url(assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    background-position: center center;
+    height: 70vh;
+    position: relative;
+}
+.main .box{
+    height: 70vh;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+nav{
+    max-width: 60vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+}
+/* position relative and z-index 10 se ye pop out hokr bahar aa jaenge.....jispe bhi hum ye 2 lines lagaegne vo vali cheez will pop out */
+nav img{
+    color: red;
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+nav button{
+    position: relative;
+    z-index: 10;
+}
+.hero{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    height: calc(100% - 85px);
+    position: relative;
+    gap: 23px;
+    padding: 0 30px;
+}
+
+/* .hero> isme humne > use kia hai bcoz we are talking about the immediate 1st, 2nd, 3rd and so on */
+.hero> :nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    text-align: center;
+}
+.hero> :nth-child(2){
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+.seperation{
+    background-color: rgb(48, 46, 46);
+    height: 7px;
+    position: relative;
+    z-index: 20;
+}
+.btn{
+    padding: 3px 8px;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: rgba(248, 243, 243, 0.021);
+}
+.btn-red{
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 24px;
+    border-radius: 4px;
+}
+.main input{
+    padding: 7px 101px 8px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);   /* 0.3 is opacity i.e transparent kitna rhega */
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    color: white;
+}
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.btn-red-sm{
+    background-color: red;
+    color: white;
+}
+
+/* ab section styling starts */
+
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;     /* margin auto ka matlab hai ki margin aisi laga dega charo trf se ki saare contents center me aa jaenge.........to isse na bhulne bhool ke bhi */
+    max-width: 70vw;
+    color: white;
+    flex-wrap: wrap;   /* wrap kia hai taaki responsive ho website apni */
+}
+
+section.first > div span{
+    font-size: 12px;
+}
+section.first > div{
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+    font-size: 12px;
+}
+section.first > div :nth-child(1){
+    font-weight: 900;
+    font-size: 48px;
+}
+section.first > div :nth-child(2){
+    font-weight: 900;
+    font-size: 11px;
+}
+/* Relative Position: Setting the top, right, bottom, and left properties of an element with position: relative; property will cause it to adjust from its normal position. The other objects or elements will not fill the gap. */
+
+/* Absolute Position: An element with position: absolute; will cause it to adjust its position with respect to its parent. If no parent is present, then it uses the document body as parent. */
+.secImg{
+    position: relative;
+}
+.secImg img{
+    width: 376px;     /* px me li hai and not in vw taaki ye iska size fix rhe even in responsiveness as well */
+    position: relative;
+    z-index: 10;
+}
+.secImg video{
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 322px;
+}
+
+.first.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;     /* margin auto ka matlab hai ki margin aisi laga dega charo trf se ki saare contents center me aa jaenge.........to isse na bhulne bhool ke bhi */
+    max-width: 70vw;
+    color: white;
+}
+section.first.second > div{
+    display: flex;
+    flex-direction: column;
+}
+section.first.second > div :nth-child(1){
+    font-weight: 900;
+    font-size: 36px;
+}
+section.first.second > div :nth-child(2){
+    font-weight: 900;
+    font-size: 17px;
+}
+.faq{
+    background-color: black;
+    color: white;
+    padding: 34px;
+}
+.faq h2{
+    font-size: 46px;
+    text-align: center;
+}
+.faqbox{
+    background-color: rgb(46, 46, 46);
+    padding: 24px;
+    max-width: 74vw;
+    display: flex;
+    margin: 12px auto;
+    padding: 30px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+/* hover krne pe faqbox pe mention hai to isi pe hi hoga i.e change back color to mentioned and add some transitions as well. */
+.faqbox:hover{
+    background-color: rgb(63, 62, 62);
+    transition: 0.22s ease-in;
+}
+.faqbox span{
+    font-size: 20px;
+    font-weight: 300;
+}
+.faqtext{
+    text-align: center;
+    padding: 22px;
+    font-size: 18px;
+}
+.hero .b{
+    font-size: 1.25rem;
+    padding: 12px 0 0 0;
+    font-weight: bold;
+}
+.hero input{
+    padding: 7px 101px 8px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);   /* 0.3 is opacity i.e transparent kitna rhega */
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    color: white;
+}
+
+/* now designing the footer with the use of GRID */
+
+footer{
+    color: white;
+    max-width: 80vw;
+    margin: auto;
+    padding: 14px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    margin: 18px 2px;
+    gap: 10px;
+}
+.footer-item{
+    display: flex;
+    flex-direction: column;
+}
+.footer a{
+    color: white;
+}
+
+/* ab start krte hai responsive banana apni website ko...........dhyan se krna */
+
+@media screen and (max-width: 1300px) {
+    .first{
+        flex-wrap: wrap;
+    }
+    .first.second{
+        flex-wrap: wrap;
+    }
+    .first.third{
+        flex-wrap: wrap;
+    }
+    .first.fourth{
+        flex-wrap: wrap;
+    }
+    .hero> :nth-child(1){
+        font-size: 24px;
+    }
+    .hero> :nth-child(2){
+        font-size: 15px;
+    }
+    .hero> :nth-child(3){
+        font-size: 15px;
+    }
+    nav{
+        max-width: 90vw;
+    }
+    .hero-buttons{
+        /* column is flex direction taaki get started neeche gir jaaye */
+        flex-direction: column;
+    }
+    .faq h2{
+        font-size: 32px;
+    }
+    footer{
+        max-width: 90vw;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .footer-item{
+        text-align: center;
+        justify-content: center;
+    }
+}
